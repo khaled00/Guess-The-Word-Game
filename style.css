@@ -1,0 +1,142 @@
+* {
+box-sizing: border-box;
+}
+
+:root{
+    --primary-color : #3498db;
+}
+body{
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    margin: 0 0 50px;
+    background-color: white;
+    padding: 20px;
+}
+.guess-game{
+    margin: 20px auto;
+    display: flex;
+    width: 1000px;
+    align-items: flex-start;
+    justify-content: space-between;
+    .guess-area{
+            .inputs{
+                > div{
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px;
+                    span{
+                        font-size: 30px;
+                        color: #333;
+                        margin-right: 15px;
+                    }
+                    input{
+                        width: 60px;
+                        height: 60px;
+                        margin: 0 5px;
+                        text-align: center;
+                        font-size: 50px;
+                        caret-color: var(--primary-color);
+                        background-color: white;
+                        border: none;
+                        border-bottom: 3px solid #333;
+                        &:focus{
+                            outline: #ccc;
+                        }
+                        &.yes-in-place{background-color: #e67e22; color: white;}
+                        &.not-in-place{background-color: #2ecc71;color: white;}
+                        &.no{background-color: #34495e;color: white;}
+                    }
+                }
+                .disable-inputs{
+                    opacity: 50%;
+                    pointer-events: none;
+                }
+    }
+    .controls{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        height: 100px;
+        border-radius: 20%;
+        margin: 20px auto 0;
+        button{
+            color: white;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        button:disabled{
+            background-color: black;
+            cursor:no-drop;
+            opacity: 0.4;
+        }
+        .check{
+            flex: 1;
+            margin: 0 20px;
+            background-color: var(--primary-color);
+           
+        }
+        .hint{
+            width: fit-content;
+            background-color: #2ecc71;
+        }
+
+    }
+    .massages{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        span{
+            color: var(--primary-color);
+            display: block;
+            font-size: 50px;
+            text-transform: capitalize;
+
+        }
+    }
+        
+
+    }
+    .key-colors{
+        .key-color{
+            display: flex;
+            align-items: center;
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            .key{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 20px;
+                &.in-place{background-color: #e67e22;}
+                &.not-in-place{background-color: #2ecc71;}
+                &.no{background-color: #34495e;}
+            }
+            .key-text{
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+footer{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 30px;
+    width: 100%;
+    font-weight: bold;
+}
